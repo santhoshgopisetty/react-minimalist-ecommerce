@@ -12,7 +12,7 @@ const ProductDetails = () => {
   const products = useSelector(selectAllProducts);
   const loading = useSelector(selectProductsLoading);
   const [product, setProduct] = useState(null);
-  const [quantity, setQuantity] = useState(1);
+  const [quantity] = useState(1);
 
   useEffect(() => {
     if (products.length === 0) {

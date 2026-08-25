@@ -1,5 +1,5 @@
 import { Link, NavLink } from 'react-router-dom';
-import { ShoppingBag, Search, Menu } from 'lucide-react';
+import { ShoppingBag } from 'lucide-react';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectItemCount, toggleCart } from '../features/cart/cartSlice';
 import './Navbar.css';
