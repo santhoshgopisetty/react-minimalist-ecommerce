@@ -5,8 +5,11 @@
   width: 100%;
   height: 80px;
   z-index: 1000;
-  transition: all 0.3s ease;
-  border-bottom: 1px solid var(--border-color);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .nav-container {
@@ -18,10 +21,16 @@
 
 .nav-logo {
   font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: 2px;
+  font-weight: 800;
+  letter-spacing: 1px;
   color: var(--text-primary);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
+
+
 
 .nav-links {
   display: none;
@@ -30,24 +39,46 @@
 @media (min-width: 768px) {
   .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
   }
 }
 
 .nav-link {
   font-weight: 500;
+  font-size: 0.9rem;
   color: var(--text-secondary);
-  transition: color 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
-.nav-link:hover {
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--text-primary);
+  transition: width 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 0 8px var(--accent-glow);
+}
+
+.nav-link:hover,
+.nav-link.active {
   color: var(--text-primary);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
 }
 
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .icon-btn {
@@ -55,14 +86,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
-  transition: background-color 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .icon-btn:hover {
-  background-color: var(--border-color);
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 .cart-btn {
@@ -71,19 +106,19 @@
 
 .cart-badge {
   position: absolute;
-  top: 0px;
-  right: 0px;
-  background-color: var(--accent-color);
-  color: white;
+  top: -2px;
+  right: -2px;
+  background-color: var(--text-primary);
+  color: #000;
   font-size: 0.75rem;
-  font-weight: 700;
-  width: 20px;
-  height: 20px;
+  font-weight: 800;
+  width: 22px;
+  height: 22px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  border: 2px solid var(--surface-color);
+  box-shadow: 0 0 10px var(--accent-glow);
 }
 
 .mobile-menu-btn {

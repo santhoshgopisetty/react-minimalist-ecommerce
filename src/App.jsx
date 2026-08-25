@@ -4,7 +4,6 @@ import Home from './pages/Home'
 import Shop from './pages/Shop'
 import ProductDetails from './pages/ProductDetails'
 import Categories from './pages/Categories'
-import About from './pages/About'
 function App() {
   return (
     <Routes>
@@ -13,7 +12,7 @@ function App() {
         <Route path="shop" element={<Shop />} />
         <Route path="product/:id" element={<ProductDetails />} />
         <Route path="categories" element={<Categories />} />
-        <Route path="about" element={<About />} />
+
       </Route>
     </Routes>
   )

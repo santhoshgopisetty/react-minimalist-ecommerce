@@ -4,8 +4,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(15, 23, 42, 0.4);
-  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 1050;
 }
 
@@ -22,6 +21,7 @@
   flex-direction: column;
   box-shadow: -4px 0 24px rgba(0, 0, 0, 0.1);
   animation: slideInRight 0.3s ease forwards;
+  will-change: transform;
 }
 
 @keyframes slideInRight {
@@ -71,7 +71,7 @@
   height: 80px;
   object-fit: cover;
   border-radius: var(--radius-sm);
-  background-color: var(--bg-color);
+  background-color: #000;
 }
 
 .cart-item-details {
@@ -112,7 +112,8 @@
   align-items: center;
   justify-content: center;
   background-color: var(--bg-color);
-  transition: background-color 0.2s;
+  color: var(--text-primary);
+  transition: all 0.2s;
 }
 
 .quantity-controls button:hover {

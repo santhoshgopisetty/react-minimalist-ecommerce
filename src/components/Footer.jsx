@@ -5,10 +5,10 @@ const Footer = () => {
     <footer className="footer">
       <div className="container footer-content">
         <div className="footer-brand">
-          <h3>NEXUS</h3>
+          <h3>SG</h3>
           <p>Premium tech and lifestyle gear for the modern visionary.</p>
         </div>
-        
+
         <div className="footer-links">
           <h4>Shop</h4>
           <ul>
@@ -18,7 +18,7 @@ const Footer = () => {
             <li><a href="#">Sale</a></li>
           </ul>
         </div>
-        
+
         <div className="footer-links">
           <h4>Support</h4>
           <ul>
@@ -30,7 +30,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom container">
-        <p>&copy; {new Date().getFullYear()} NEXUS Store. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} SG Store. All rights reserved.</p>
       </div>
     </footer>
   );

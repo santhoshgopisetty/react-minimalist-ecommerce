@@ -30,18 +30,14 @@
 }
 
 .product-gallery {
-  background-color: var(--surface-color);
+  background-color: #000;
   border-radius: var(--radius-lg);
   overflow: hidden;
   border: 1px solid var(--border-color);
+  aspect-ratio: 1/1;
 }
 
-.main-image {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1/1;
-  object-fit: cover;
-}
+
 
 .product-info-section {
   display: flex;

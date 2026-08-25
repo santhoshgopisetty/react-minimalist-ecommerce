@@ -23,10 +23,10 @@ const Home = () => {
     <div className="home animate-fade-in">
       <section className="hero">
         <div className="hero-content container">
-          <span className="hero-badge">New Collection</span>
           <h1 className="hero-title">Discover the Future of Tech & Lifestyle</h1>
           <p className="hero-subtitle">
-            Elevate your everyday with our curated selection of premium gadgets, accessories, and modern essentials designed for the visionary.
+            Elevate your everyday with our curated selection of premium gadgets,
+            accessories, and modern essentials designed for the visionary.
           </p>
           <div className="hero-actions">
             <Link to="/shop" className="btn btn-primary btn-lg">
@@ -36,14 +36,6 @@ const Home = () => {
               Explore Story
             </Link>
           </div>
-        </div>
-        <div className="hero-image-wrapper">
-          <img 
-            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&q=80" 
-            alt="Premium workspace setup" 
-            className="hero-image"
-          />
-          <div className="hero-overlay"></div>
         </div>
       </section>
 
@@ -55,19 +47,21 @@ const Home = () => {
           </Link>
         </div>
 
-        {loading ? (
-          <div className="loading-grid">
-            {[...Array(3)].map((_, i) => (
-              <div key={i} className="skeleton-card"></div>
-            ))}
-          </div>
-        ) : (
-          <div className="product-grid">
-            {featuredProducts.map(product => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
-        )}
+        <div className="prod-box">
+          {loading ? (
+            <div className="loading-grid">
+              {[...Array(3)].map((_, i) => (
+                <div key={i} className="skeleton-card"></div>
+              ))}
+            </div>
+          ) : (
+            <div className="product-grid">
+              {featuredProducts.map(product => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+            </div>
+          )}
+        </div>
       </section>
 
       <section className="categories-section container">

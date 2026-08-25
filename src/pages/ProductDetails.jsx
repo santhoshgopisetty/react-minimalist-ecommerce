@@ -47,13 +47,13 @@ const ProductDetails = () => {
 
       <div className="product-details-grid">
         <div className="product-gallery">
-          <img src={product.image} alt={product.name} className="main-image" />
+
         </div>
 
         <div className="product-info-section">
           <span className="product-category-label">{product.category}</span>
           <h1 className="product-title">{product.name}</h1>
-          <p className="product-price-large">${product.price.toFixed(2)}</p>
+          <p className="product-price-large">₹{product.price}</p>
           
           <p className="product-description">{product.description}</p>
 

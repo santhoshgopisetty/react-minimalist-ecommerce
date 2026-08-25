@@ -6,7 +6,7 @@ const About = () => {
     <div className="about-page animate-fade-in">
       <div className="about-hero container">
         <div className="about-hero-content">
-          <h1 className="display-title">The NEXUS Story</h1>
+          <h1 className="display-title">The SG Story</h1>
           <p className="lead">
             We believe that technology should be an extension of yourself. Seamless, beautiful, and powerful.
           </p>

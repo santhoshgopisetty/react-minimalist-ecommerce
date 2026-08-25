@@ -31,10 +31,10 @@ const CartDrawer = () => {
           ) : (
             cart.map(item => (
               <div key={item.id} className="cart-item">
-                <img src={item.image} alt={item.name} className="cart-item-image" />
+                <div className="cart-item-image" />
                 <div className="cart-item-details">
                   <h4>{item.name}</h4>
-                  <p className="cart-item-price">${item.price.toFixed(2)}</p>
+                  <p className="cart-item-price">₹{item.price}</p>
                   <div className="cart-item-actions">
                     <div className="quantity-controls">
                       <button onClick={() => dispatch(updateQuantity({ id: item.id, amount: -1 }))}><Minus size={14} /></button>
@@ -55,7 +55,7 @@ const CartDrawer = () => {
           <div className="cart-footer">
             <div className="cart-total">
               <span>Subtotal</span>
-              <span>${cartTotal.toFixed(2)}</span>
+              <span>₹{cartTotal}</span>
             </div>
             <button className="btn btn-primary checkout-btn">Checkout</button>
           </div>

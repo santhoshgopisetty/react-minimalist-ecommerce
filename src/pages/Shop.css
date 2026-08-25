@@ -81,8 +81,8 @@
 
 .category-btn.active {
   background-color: var(--accent-color);
-  color: white;
-  font-weight: 500;
+  color: #000000;
+  font-weight: 600;
 }
 
 .shop-content {

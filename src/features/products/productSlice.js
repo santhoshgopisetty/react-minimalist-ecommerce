@@ -1,11 +1,10 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-// Mock data focusing on modern tech and accessories
 const mockData = [
   {
     id: 1,
     name: 'Quantum Noise-Cancelling Headphones',
-    price: 299.99,
+    price: 1499,
     category: 'Audio',
     image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80',
     description: 'Experience pure audio bliss with our latest quantum noise-cancelling technology.',
@@ -14,7 +13,7 @@ const mockData = [
   {
     id: 2,
     name: 'Nova Smartwatch Pro',
-    price: 199.50,
+    price: 999,
     category: 'Wearables',
     image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&q=80',
     description: 'Track your fitness, notifications, and life with the sleek Nova Pro.',
@@ -23,7 +22,7 @@ const mockData = [
   {
     id: 3,
     name: 'Aether Mechanical Keyboard',
-    price: 149.00,
+    price: 799,
     category: 'Accessories',
     image: 'https://images.unsplash.com/photo-1595225476474-87563907a212?w=800&q=80',
     description: 'Tactile, responsive, and beautifully backlit for the ultimate typing experience.',
@@ -32,7 +31,7 @@ const mockData = [
   {
     id: 4,
     name: 'Zenith Minimalist Backpack',
-    price: 89.99,
+    price: 499,
     category: 'Lifestyle',
     image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&q=80',
     description: 'Carry your essentials in style with this water-resistant, durable backpack.',
@@ -41,7 +40,7 @@ const mockData = [
   {
     id: 5,
     name: 'Lumina Desk Lamp',
-    price: 59.99,
+    price: 299,
     category: 'Home Office',
     image: 'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=800&q=80',
     description: 'Adjustable color temperature and brightness for your perfect workspace.',
@@ -50,7 +49,7 @@ const mockData = [
   {
     id: 6,
     name: 'Echo Wireless Earbuds',
-    price: 129.99,
+    price: 599,
     category: 'Audio',
     image: 'https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=800&q=80',
     description: 'Compact, powerful, and truly wireless earbuds with deep bass.',

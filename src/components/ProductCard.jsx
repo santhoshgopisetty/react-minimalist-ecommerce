@@ -16,8 +16,8 @@ const ProductCard = ({ product }) => {
   return (
     <Link to={`/product/${product.id}`} className="product-card">
       <div className="product-image-container">
-        <img src={product.image} alt={product.name} className="product-image" loading="lazy" />
-        <button 
+
+        <button
           className="add-to-cart-quick"
           onClick={handleAddToCart}
           aria-label="Add to cart"
@@ -28,7 +28,7 @@ const ProductCard = ({ product }) => {
       <div className="product-info">
         <span className="product-category">{product.category}</span>
         <h3 className="product-name">{product.name}</h3>
-        <p className="product-price">${product.price.toFixed(2)}</p>
+        <p className="product-price">₹{product.price}</p>
       </div>
     </Link>
   );

@@ -51,7 +51,6 @@ const cartSlice = createSlice({
 
 export const { addToCart, removeFromCart, updateQuantity, clearCart, toggleCart } = cartSlice.actions;
 
-// Selectors
 export const selectCartItems = (state) => state.cart.items;
 export const selectIsCartOpen = (state) => state.cart.isCartOpen;
 export const selectCartTotal = (state) =>

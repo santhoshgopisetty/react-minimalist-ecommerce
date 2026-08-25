@@ -22,8 +22,7 @@ const Categories = () => {
   }, {});
 
   const categories = Object.keys(categoriesMap).map(key => ({
-    name: key,
-    image: categoriesMap[key]
+    name: key
   }));
 
   return (
@@ -38,15 +37,12 @@ const Categories = () => {
           <Link 
             to={`/shop?category=${encodeURIComponent(category.name)}`} 
             key={category.name}
-            className="category-card"
+            className="category-card-clean"
             style={{ animationDelay: `${index * 0.1}s` }}
           >
-            <div className="category-image">
-              <img src={category.image} alt={category.name} />
-              <div className="category-overlay glass">
-                <h2>{category.name}</h2>
-                <span className="explore-text">Explore Collection &rarr;</span>
-              </div>
+            <div className="category-content-clean">
+              <h2>{category.name}</h2>
+              <span className="explore-text">Explore Collection &rarr;</span>
             </div>
           </Link>
         ))}
