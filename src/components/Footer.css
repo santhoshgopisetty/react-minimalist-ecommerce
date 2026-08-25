@@ -9,8 +9,8 @@
 .footer-content {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 3rem;
-  margin-bottom: 4rem;
+  gap: 2rem;
+  margin-bottom: 3rem;
 }
 
 @media (min-width: 768px) {
