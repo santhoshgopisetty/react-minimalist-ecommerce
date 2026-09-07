@@ -8,6 +8,7 @@
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
   border: 1px solid rgba(255, 255, 255, 0.05);
   height: 100%;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .product-card:hover {
@@ -15,6 +16,15 @@
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 255, 255, 0.05);
   border-color: rgba(255, 255, 255, 0.15);
   background: rgba(255, 255, 255, 0.03);
+}
+
+/* On touch devices, provide visual feedback on tap instead of hover */
+@media (hover: none) {
+  .product-card:active {
+    transform: scale(0.98);
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.12);
+  }
 }
 
 .product-image-container {
@@ -39,13 +49,13 @@
 
 .add-to-cart-quick {
   position: absolute;
-  bottom: 1.5rem;
-  right: 1.5rem;
+  bottom: 1rem;
+  right: 1rem;
   background-color: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(10px);
   color: var(--text-primary);
-  width: 45px;
-  height: 45px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -55,11 +65,26 @@
   transform: translateY(20px);
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .product-card:hover .add-to-cart-quick {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* On touch devices, always show the add-to-cart button */
+@media (hover: none) {
+  .add-to-cart-quick {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .add-to-cart-quick:active {
+    background-color: var(--accent-color);
+    color: #000;
+    transform: scale(0.92);
+  }
 }
 
 .add-to-cart-quick:hover {
@@ -70,37 +95,61 @@
 }
 
 .product-info {
-  padding: 1.5rem;
+  padding: 1.25rem;
   display: flex;
   flex-direction: column;
   flex: 1;
 }
 
+@media (min-width: 768px) {
+  .product-info {
+    padding: 1.5rem;
+  }
+}
+
 .product-category {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: var(--text-secondary);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
   font-weight: 600;
 }
 
+@media (min-width: 768px) {
+  .product-category {
+    font-size: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+}
+
 .product-name {
-  font-size: 1.15rem;
+  font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
   color: var(--text-primary);
   line-height: 1.4;
   letter-spacing: 0.5px;
 }
 
+@media (min-width: 768px) {
+  .product-name {
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
+}
+
 .product-price {
   margin-top: auto;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--text-primary);
   display: flex;
   align-items: center;
 }
 
-
+@media (min-width: 768px) {
+  .product-price {
+    font-size: 1.3rem;
+  }
+}

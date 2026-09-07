@@ -32,9 +32,6 @@ const Home = () => {
             <Link to="/shop" className="btn btn-primary btn-lg">
               Shop Now <ArrowRight size={20} className="ml-2" />
             </Link>
-            <Link to="/about" className="btn btn-secondary btn-lg">
-              Explore Story
-            </Link>
           </div>
         </div>
       </section>
